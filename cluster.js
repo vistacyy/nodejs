@@ -6,16 +6,16 @@ if (cluster.isMaster) {
   for (var i = 0; i < numWorkers; i++) {
     cluster.fork();
   }
-  cluster.on('online', function(worker) {
+  cluster.on('online', function (worker) {
     console.log('Worker ' + worker.process.pid + ' is online');
   });
-  cluster.on('exit', function(worker, code, signal) {
+  cluster.on('exit', function (worker, code, signal) {
     console.log('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal);
     console.log('Starting a new worker');
     cluster.fork();
   });
 } else {
-  http.createServer(function(req, res) {
+  http.createServer(function (req, res) {
     res.writeHead(200);
     res.end("hello world\n");
   }).listen(8000);

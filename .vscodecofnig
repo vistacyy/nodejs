@@ -1,0 +1,23 @@
+// 覆盖原设置
+{
+    // 以像素为单位控制字号。
+    "editor.fontSize": 18,
+    // 一个制表符等于的空格数。该设置在 `editor.detectIndentation` 启用时根据文件内容进行重写。
+    "editor.tabSize": 2,
+    // 控制编辑器是否应呈现缩进参考线
+    "editor.renderIndentGuides": true,
+    // 控制打开的编辑器是否显示为预览。预览编辑器可以重新使用，直到将其保留(例如，双击或编辑)。
+    "workbench.editor.enablePreview": false,
+    // 自动更新扩展
+    "extensions.autoUpdate": true,
+    // 启用要发送给 Microsoft 的使用情况数据和错误。
+    "telemetry.enableTelemetry": false,
+    // 启用要发送给 Microsoft 的故障报表。
+    "telemetry.enableCrashReporter": false,
+    // 控制换行的行的缩进。可以是"none"、 "same" 或 "indent"。
+    "editor.wrappingIndent": "indent",
+    // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+    "editor.formatOnSave": true,
+    // 自动升级配置
+    "update.channel": "none"
+}

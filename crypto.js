@@ -21,8 +21,8 @@ var fs = require('fs');
 
 // 签名验证
 // var data = 'abcdef';
-// var privateKey=fs.readFileSync('server.pem').toString();
-// var publicKey = fs.readFileSync('cert.pem').toString();
+// var privateKey=fs.readFileSync('./resource/server.pem').toString();
+// var publicKey = fs.readFileSync('./resource/cert.pem').toString();
 // var sign = crypto.createSign('RSA-SHA256');
 // sign.update(data);
 // var signText = sign.sign(privateKey, 'hex');

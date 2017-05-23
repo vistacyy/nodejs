@@ -4,7 +4,7 @@ var dns = require('dns');
 //   console.log('addresses:', addresses);
 // });
 
-dns.resolve('www.google.com', 'A',function (err, addresses) {
+dns.resolve('www.google.com', 'A', function (err, addresses) {
   if (err) throw err;
   console.log('addresses: ' + JSON.stringify(addresses));
   addresses.forEach(function (a) {

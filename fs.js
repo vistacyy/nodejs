@@ -5,7 +5,7 @@ var fs = require('fs');
 //   console.log(text.toString());
 // });
 
-// fs.writeFile('message.txt', 'Hello Node.js', err => {
+// fs.writeFile('./target/message.txt', 'Hello Node.js', err => {
 //   if (err) throw err;
 //   console.log('It\'s saved!');
 // });
@@ -39,7 +39,7 @@ var fs = require('fs');
 //   });
 // });
 
-// fs.watchFile('./message.txt', function(curr, prev) {
+// fs.watchFile('./target/message.txt', function(curr, prev) {
 //   console.log('the current mtime is: ' + curr.mtime);
 //   console.log('the previous mtime was: ' + prev.mtime);
 // });
@@ -68,19 +68,20 @@ var fs = require('fs');
 // function func(data) {
 //   console.log('Line: ' + data);
 // }
-// var input = fs.createReadStream('message.txt');
+// var input = fs.createReadStream('./target/message.txt');
 // readLines(input, func);
 
 function fileCopy(filename1, filename2, done) {
   var input = fs.createReadStream(filename1);
   var output = fs.createWriteStream(filename2);
 
-  input.on('data', function(d) { output.write(d); });
-  input.on('error', function(err) { throw err; });
-  input.on('end', function() {
+  input.on('data', function (d) { output.write(d); });
+  input.on('error', function (err) { throw err; });
+  input.on('end', function () {
     output.end();
     if (done) done();
   });
 }
 
-fileCopy('./message.txt', './target.txt');
+
+fileCopy('./target/message.txt', './target/target.txt');
