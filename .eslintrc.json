@@ -9,6 +9,7 @@
   "parserOptions": {
     "sourceType": "module"
   },
+  "parser": "babel-eslint",
   "rules": {
     "indent": [
       2,

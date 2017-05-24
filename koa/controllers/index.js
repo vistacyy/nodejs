@@ -1,4 +1,4 @@
-var fn_index = async (ctx, next) => {
+var fn_index = async(ctx, next) => {
   ctx.response.body = `<h1>Index</h1>
         <form action="/signin" method="post">
             <p>Name: <input name="name" value="koa"></p>
@@ -7,7 +7,7 @@ var fn_index = async (ctx, next) => {
         </form>`;
 };
 
-var fn_signin = async (ctx, next) => {
+var fn_signin = async(ctx, next) => {
   var
     name = ctx.request.body.name || '',
     password = ctx.request.body.password || '';
