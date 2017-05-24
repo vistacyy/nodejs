@@ -82,6 +82,4 @@ function fileCopy(filename1, filename2, done) {
     if (done) done();
   });
 }
-
-
 fileCopy('./target/message.txt', './target/target.txt');
