@@ -11,7 +11,7 @@ const app = new Koa();
 const isProduction = process.env.NODE_ENV === 'production';
 
 // log request URL:
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
   var
     start = new Date().getTime(),
@@ -40,4 +40,4 @@ app.use(templating('views', {
 app.use(controller());
 
 app.listen(8000);
-console.log('app started at port 3000...');
+console.log('app started at port 8000...');
