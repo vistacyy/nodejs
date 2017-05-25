@@ -13,8 +13,7 @@
     "mz": "^2.6.0",
     "nunjucks": "^3.0.1",
     "sequelize": "^3.30.4",
-    "url": "^0.11.0",
-    "ws": "^3.0.0"
+    "ws": "^1.1.1"
   },
   "devDependencies": {},
   "scripts": {
