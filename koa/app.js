@@ -12,11 +12,11 @@ app.use(async(ctx, next) => {
   await next();
 });
 
-// parse request body:
+// 解析POST请求数据到ctx.request.body
 app.use(bodyParser());
 
-// add controllers:
+// 添加路由
 app.use(controller());
 
 app.listen(8000);
-console.log('app started at port 3000...');
+console.log('app started at port 8000...');

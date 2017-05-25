@@ -2,6 +2,7 @@ const fs = require('fs');
 
 let path;
 
+// 根据路由键名(如GET /)，注册路由
 function addMapping(router, mapping) {
   for (let url in mapping) {
     if (url.startsWith('GET ')) {
@@ -27,6 +28,7 @@ function addMapping(router, mapping) {
 }
 
 function addControllers(router, dir) {
+  // 添加dir下所有js文件中的路由
   fs.readdirSync(__dirname + '/' + dir).filter((f) => {
     return f.endsWith('.js');
   }).forEach((f) => {
@@ -38,6 +40,7 @@ function addControllers(router, dir) {
 
 module.exports = function(dir) {
   let controllers_dir = dir || 'controllers';
+  // router.get('/hello/:name', async (ctx, next) => {}),变量ctx.params.name
   let router = require('koa-router')();
   addControllers(router, controllers_dir);
   return router.routes();

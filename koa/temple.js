@@ -31,9 +31,6 @@ var env = createEnv('views', {
   }
 });
 
-// var s = env.render('index.html', { name: '小明' });
-// console.log(s);
-
 console.log(env.render('extend.html', {
   header: 'Hello',
   body: 'bla bla bla...'
