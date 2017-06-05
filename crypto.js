@@ -4,7 +4,6 @@ var fs = require('fs');
 // 哈希 
 // var md5=crypto.createHash('sha1');
 // var hashMD5=md5.update('foo').digest('hex');
-
 // var hmac=crypto.createHmac('sha1','privateKey');
 // var hmacTxt=hmac.update('foo').digest('hex');
 // console.log('hashMD5',hashMD5,'\nhmacTxt',hmacTxt);
@@ -32,10 +31,10 @@ var fs = require('fs');
 // console.log('result',result);
 
 // 迪菲－赫尔曼密钥交换
-var alice = crypto.getDiffieHellman('modp5');
-var bob = crypto.getDiffieHellman('modp5');
-alice.generateKeys();
-bob.generateKeys();
-var alice_secret = alice.computeSecret(bob.getPublicKey(), 'binary', 'hex');
-var bob_secret = bob.computeSecret(alice.getPublicKey(), 'binary', 'hex');
-console.log(alice_secret == bob_secret);
+// var alice = crypto.getDiffieHellman('modp5');
+// var bob = crypto.getDiffieHellman('modp5');
+// alice.generateKeys();
+// bob.generateKeys();
+// var alice_secret = alice.computeSecret(bob.getPublicKey(), 'binary', 'hex');
+// var bob_secret = bob.computeSecret(alice.getPublicKey(), 'binary', 'hex');
+// console.log(alice_secret == bob_secret);
