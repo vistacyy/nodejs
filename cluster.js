@@ -1,9 +1,9 @@
-var cluster = require('cluster');
-var http = require('http');
+let cluster = require('cluster');
+let http = require('http');
 if (cluster.isMaster) {
-  var numWorkers = require('os').cpus().length;
+  let numWorkers = require('os').cpus().length;
   console.log('Master cluster setting up ' + numWorkers + ' workers...');
-  for (var i = 0; i < numWorkers; i++) {
+  for (let i = 0; i < numWorkers; i++) {
     cluster.fork();
   }
   cluster.on('online', function (worker) {
