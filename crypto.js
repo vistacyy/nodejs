@@ -4,7 +4,6 @@ var fs = require('fs');
 // 哈希 
 // var md5=crypto.createHash('sha1');
 // var hashMD5=md5.update('foo').digest('hex');
-
 // var hmac=crypto.createHmac('sha1','privateKey');
 // var hmacTxt=hmac.update('foo').digest('hex');
 // console.log('hashMD5',hashMD5,'\nhmacTxt',hmacTxt);

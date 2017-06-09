@@ -1,8 +1,11 @@
 let cluster = require('cluster');
 let http = require('http');
 
-if (cluster.isMaster) {
+let num=0;
 
+console.log((num++) +'\n');
+
+if (cluster.isMaster) {
   let numWorkers = require('os').cpus().length;
   console.log('Master cluster setting up ' + numWorkers + ' workers...');
 
@@ -22,9 +25,12 @@ if (cluster.isMaster) {
 
 } else {
 
+  console.log('Worker setting up No.' + (num++) + ' workers...');
+
   http.createServer(function (req, res) {
     res.writeHead(200);
     res.end("hello world\n");
+    console.log('Worker #' + cluster.worker.id + ' make a response');
   }).listen(8000);
   
 }
