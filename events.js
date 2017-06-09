@@ -1,4 +1,5 @@
 var EventEmitter = require('events').EventEmitter;
+
 // var emitter = new EventEmitter();
 // emitter.on('someEvent', function() {
 //   console.log('event has occured');
@@ -13,6 +14,7 @@ var EventEmitter = require('events').EventEmitter;
 function Dog(name) {
   this.name = name;
 }
+
 Dog.prototype.__proto__ = EventEmitter.prototype;
 
 var simon = new Dog('simon');

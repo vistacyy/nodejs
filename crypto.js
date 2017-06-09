@@ -19,16 +19,16 @@ var fs = require('fs');
 // console.log('crypted',crypted,'dec',dec);
 
 // 签名验证
-var data = 'abcdef';
-var privateKey=fs.readFileSync('./resource/server.pem').toString();
-var publicKey = fs.readFileSync('./resource/cert.pem').toString();
-var sign = crypto.createSign('RSA-SHA256');
-sign.update(data);
-var signText = sign.sign(privateKey, 'hex');
-var verify = crypto.createVerify('RSA-SHA256');
-verify.update(data);
-var result=verify.verify(publicKey, signText, 'hex');
-console.log('result',result);
+// var data = 'abcdef';
+// var privateKey=fs.readFileSync('./resource/server.pem').toString();
+// var publicKey = fs.readFileSync('./resource/cert.pem').toString();
+// var sign = crypto.createSign('RSA-SHA256');
+// sign.update(data);
+// var signText = sign.sign(privateKey, 'hex');
+// var verify = crypto.createVerify('RSA-SHA256');
+// verify.update(data);
+// var result=verify.verify(publicKey, signText, 'hex');
+// console.log('result',result);
 
 // 迪菲－赫尔曼密钥交换
 // var alice = crypto.getDiffieHellman('modp5');
