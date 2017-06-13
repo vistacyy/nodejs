@@ -1,2 +1,5 @@
 node_modules/
 .vscode/
+target/
+helloDir/
+.DS_Store
