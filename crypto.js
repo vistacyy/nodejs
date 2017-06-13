@@ -1,13 +1,6 @@
 var crypto = require('crypto');
 var fs = require('fs');
 
-// 哈希 
-// var md5=crypto.createHash('sha1');
-// var hashMD5=md5.update('foo').digest('hex');
-// var hmac=crypto.createHmac('sha1','privateKey');
-// var hmacTxt=hmac.update('foo').digest('hex');
-// console.log('hashMD5',hashMD5,'\nhmacTxt',hmacTxt);
-
 // 加密、解密
 // var text = "123|123123123123123";
 // var cipher = crypto.createCipher('aes-256-cbc','InmbuvP6Z8');
@@ -17,6 +10,13 @@ var fs = require('fs');
 // var dec = decipher.update(crypted,'hex','utf8');
 // dec += decipher.final('utf8');
 // console.log('crypted',crypted,'dec',dec);
+
+// 哈希 
+// var md5=crypto.createHash('sha1');
+// var hashMD5=md5.update('foo').digest('hex');
+// var hmac=crypto.createHmac('sha1','privateKey');
+// var hmacTxt=hmac.update('foo').digest('hex');
+// console.log('hashMD5',hashMD5,'\nhmacTxt',hmacTxt);
 
 // 签名验证
 // var data = 'abcdef';
